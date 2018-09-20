@@ -1,3 +1,3 @@
-# config-app
+# config-server
 
 Spring Cloud Application
