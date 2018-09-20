@@ -11,4 +11,4 @@ RUN java -version
 VOLUME /tmp
 RUN bash -c 'touch /app/config-service/config.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/config-service/config.jar"]
-EXPOSE 80
+EXPOSE 8002

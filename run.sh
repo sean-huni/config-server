@@ -2,7 +2,7 @@
 
 # Script to deploy the app
 deploy(){
-# From the host machine, run the following cmd
+# From the remote host-machine, run the following cmd
     docker pull s34n/config-img
     docker run --name='config' -d -it -p 8002:8002 s34n/config-img && docker logs config -f
 }
@@ -22,9 +22,9 @@ rebuild(){
 }
 
 # Let's get rid of the pre-existing docker images on the machine.
-if [[ ! -z "$(docker container ps | grep config-service)" ]]; then
+if [[ ! -z "$(docker container ps | grep config)" ]]; then
     echo "Config-Service Docker Container Found"
-    docker stop config-service && docker rm config-service && docker rmi config-img
+    docker stop config && docker rm config && docker rmi config-img
     rebuild
 else
     echo "Config-Service Docker Container NOT Found"
