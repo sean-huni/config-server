@@ -1,3 +1,3 @@
 # config-server
 
-Spring Cloud Application
+Spring Cloud (Microservice)
