@@ -18,8 +18,11 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 group = 'io.sciro'
-version = '0.1'
+//version = '0.1'
 sourceCompatibility = 1.8
+
+archivesBaseName = 'config'
+jar.archiveName = 'config.jar'
 
 repositories {
     mavenCentral()

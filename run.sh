@@ -2,7 +2,9 @@
 
 # Script to deploy the app
 deploy(){
-    docker run --name='config-service' -d -it -p 8002:8002 config-img && docker logs config-service -f
+# From the host machine, run the following cmd
+    docker pull s34n/config-img
+    docker run --name='config' -d -it -p 8002:8002 s34n/config-img && docker logs config -f
 }
 
 # Tag-And-Push Script to tag & push the app
