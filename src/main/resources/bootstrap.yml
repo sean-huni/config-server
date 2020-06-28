@@ -9,18 +9,18 @@ spring:
 # Items that apply to ALL profiles:
 eureka:
   instance:
-    hostname: 10.133.33.126
+    hostname: 198.13.51.15
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8001/eureka/
 
-
 ---
 # Instructs the Spring-Config App where to locate
 # the configurations for the microservices.
+
 spring:
   rabbitmq:
-    host: 10.133.33.126
+    host: 198.13.51.15
     password: admin
     username: admin
   cloud:
@@ -37,4 +37,4 @@ spring:
 ---
 spring:
   zipkin:
-    base-url: 10.133.33.126:9411
+    base-url: 198.13.51.15:9411
